@@ -10,7 +10,7 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body onload="init()">
     <!-- As a link -->
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
@@ -23,27 +23,27 @@
       <div class="card quiz-card">
         <img src="./img/card.jpg" class="card-img-top" />
         <div class="card-body">
-          <h5 class="card-title">Frage</h5>
+          <h5 class="card-title" id="questiontext">Frage</h5>
 
-          <div class="card">
-            <div class="card-body mb-2">Antwort</div>
+          <div class="card quiz-answer-card" onclick="answer('answer_1')">
+            <div class="card-body mb-2" id="answer_1">Antwort</div>
           </div>
 
-          <div class="card">
-            <div class="card-body mb-2">Antwort</div>
+          <div class="card quiz-answer-card" onclick="answer('answer_2')">
+            <div class="card-body mb-2" id="answer_2">Antwort</div>
           </div>
 
-          <div class="card">
-            <div class="card-body mb-2">Antwort</div>
+          <div class="card quiz-answer-card" onclick="answer('answer_3')">
+            <div class="card-body mb-2" id="answer_3">Antwort</div>
           </div>
 
-          <div class="card">
-            <div class="card-body mb-2">Antwort</div>
+          <div class="card quiz-answer-card" onclick="answer('answer_4')">
+            <div class="card-body mb-2" id="answer_4">Antwort</div>
           </div>
         </div>
 
         <div class="question-footer">
-          <span> <b>1</b> von <b>5</b> Fragen </span>
+          <span> <b>1</b> von <b id="allQuestions"></b> Fragen </span>
           <button type="button" class="btn btn-primary">Nächste Frage</button>
         </div>
       </div>
