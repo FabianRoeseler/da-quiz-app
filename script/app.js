@@ -1,27 +1,30 @@
 let questions = [
   {
-    question: "Wer hat HTML erfunden?",
-    answer_1: "Robbie Williams",
-    answer_2: "Lady Gaga",
-    answer_3: "Tim Berners-Lee",
-    answer_4: "Justin Bieber",
+    question:
+      "Mit wem stand Edmund Hillary 1953 auf dem Gipfel des Mount Everest?",
+    answer_1: "Nasreddin Hodscha",
+    answer_2: "Nursay Pimsorn",
+    answer_3: "Tenzing Norgay",
+    answer_4: "Abrindranath Singh",
     right_answer: 3,
   },
   {
-    question: "Was bedeutet das HTML Tag <a>?",
-    answer_1: "Text Fett",
-    answer_2: "Container",
-    answer_3: "Ein Link",
-    answer_4: "Kursiv",
-    right_answer: 3,
-  },
-  {
-    question: "Wie bindet man eine Website in eine Website ein?",
-    answer_1: "falsch",
-    answer_2: "richtig",
-    answer_3: "falsch",
-    answer_4: "falsch",
+    question:
+      "Welche beiden Gibb-Brüder der Popband The Bee Gees sind Zwillinge?",
+    answer_1: "Robin und Barry",
+    answer_2: "Maurice und Robin ",
+    answer_3: "Barry und Maurice",
+    answer_4: "Andy und Robin",
     right_answer: 2,
+  },
+  {
+    question:
+      "Welcher berühmte Schriftsteller erbaute als diplomierter Architekt ein Freibad in Zürich?",
+    answer_1: "Joseph Roth",
+    answer_2: "Martin Walser",
+    answer_3: "Friedrich Dürrenmatt",
+    answer_4: "Max Frisch",
+    right_answer: 4,
   },
   {
     question: "Wer ist ein braver Junge?",
@@ -29,7 +32,7 @@ let questions = [
     answer_2: "Lyonel",
     answer_3: "Jenny",
     answer_4: "Freddy",
-    right_answer: 2,
+    right_answer: 4,
   },
 ];
 
