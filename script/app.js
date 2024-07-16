@@ -32,7 +32,7 @@ let questions = [
     answer_2: "Lyonel",
     answer_3: "Jenny",
     answer_4: "Freddy",
-    right_answer: 4,
+    right_answer: 3,
   },
 ];
 
