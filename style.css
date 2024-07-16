@@ -3,8 +3,37 @@ body {
   background-color: #007AAF;
 }
 
+.width-100 {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.final-line{
+  font-size: 38px;
+  margin-bottom: 32px;
+}
+
+.progress {
+  padding-top: 5px;
+  border-radius: 0;
+}
+
+.buttonRow {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+
 .navbar {
   background-color: #007AAF !important;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
 }
 
 .container {

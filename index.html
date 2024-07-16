@@ -17,14 +17,39 @@
         <a class="navbar-brand" href="#">Navbar</a>
       </div>
     </nav>
-
-    <h1>Quizzap</h1>
+    <div class="header">
+      <h1>Quizzap</h1>
+    </div>
     <div class="container">
       <div class="card quiz-card">
-        <img src="./img/card.jpg" class="card-img-top" />
+        <img id="headerImage" src="./img/card.jpg" class="card-img-top" />
+        <div class="progress">
+          <div
+            id="progress-bar"
+            class="progress-bar"
+            role="progressbar"
+            style="width: 0%"
+          >
+            0%
+          </div>
+        </div>
 
-        <div class="card-body" id="endScreen" style="display: none">
-          Quiz beendet!
+        <div class="card-body text-center" id="endScreen" style="display: none">
+          <div class="text-center final-line">Quiz beendet!</div>
+
+          <span
+            >Du hast <b id="amountOfRightQuestions">XXX</b> Fragen von
+            <b id="amountOfQuestions">XXX</b> richtig beantwortet!</span
+          >
+          <div class="buttonRow">
+            <button
+              onclick="restartGame()"
+              type="button"
+              class="btn btn-primary"
+            >
+              Erneut spielen!
+            </button>
+          </div>
         </div>
 
         <div class="card-body" id="questionBody">
@@ -47,7 +72,7 @@
           </div>
         </div>
 
-        <div class="question-footer">
+        <div class="question-footer" id="question-footer">
           <span>
             <b id="question-number">1</b> von <b id="allQuestions"></b> Fragen
           </span>

@@ -34,6 +34,7 @@ let questions = [
 ];
 
 let currentQuestion = 0;
+let rightQuestions = 0;
 
 function init() {
   document.getElementById("allQuestions").innerHTML = questions.length;
@@ -44,7 +45,17 @@ function showQuestion() {
   if (currentQuestion >= questions.length) {
     document.getElementById("endScreen").style = "";
     document.getElementById("questionBody").style = "display: none";
+    document.getElementById("amountOfQuestions").innerHTML = questions.length;
+    document.getElementById("amountOfRightQuestions").innerHTML =
+      rightQuestions;
+    document.getElementById("headerImage").src = "./img/win.png";
+    document.getElementById("question-footer").style = "display: none";
   } else {
+    let percent = (currentQuestion + 1) / questions.length;
+    percent = Math.round(percent * 100);
+    document.getElementById("progress-bar").innerHTML = `${percent} %`;
+    document.getElementById("progress-bar").style = `width: ${percent}%;`;
+
     let question = questions[currentQuestion];
 
     document.getElementById("question-number").innerHTML = currentQuestion + 1;
@@ -63,6 +74,7 @@ function answer(selection) {
 
   if (selectedQuestionNumber == question["right_answer"]) {
     document.getElementById(selection).parentNode.classList.add("bg-success");
+    rightQuestions++;
   } else {
     document.getElementById(selection).parentNode.classList.add("bg-danger");
     document
@@ -88,4 +100,14 @@ function resetAnswerButtons() {
   document.getElementById("answer_3").parentNode.classList.remove("bg-success");
   document.getElementById("answer_4").parentNode.classList.remove("bg-danger");
   document.getElementById("answer_4").parentNode.classList.remove("bg-success");
+}
+
+function restartGame() {
+  document.getElementById("headerImage").src = "./img/card.jpg";
+  currentQuestion = 0;
+  rightQuestions = 0;
+  init();
+  document.getElementById("endScreen").style = "display: none";
+  document.getElementById("questionBody").style = "";
+  document.getElementById("question-footer").style = "";
 }
